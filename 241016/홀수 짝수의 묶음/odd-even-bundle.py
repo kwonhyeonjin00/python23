@@ -16,7 +16,7 @@ elif even == odd:
 
 elif even < odd:
     cnt = 0
-    cnt += even
+    cnt += even * 2
     odd -= even
 
     k = 2
