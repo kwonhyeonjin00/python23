@@ -7,10 +7,12 @@ x = arr.pop()
 chk = 1
 
 for i in range(n - 1):
-    t = arr.pop()
-    if t + 1 == x:
+    #print(arr[n - 2 - i])
+    if arr[n - 2 - i] + 1 < x:
         chk += 1
-        x = t
+        x = arr[n - 2 - i]
     else:
         print(n - chk)
         break
+
+print(0)
