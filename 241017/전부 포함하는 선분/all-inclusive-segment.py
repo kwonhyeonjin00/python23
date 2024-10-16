@@ -1,19 +1,19 @@
 n = int(input())
-arr0 = []
-arr1 = []
+arr = [list(map(int, input().split())) for _ in range(n)]
+
+ans = 101
 
 for i in range(n):
-    a, b = map(int, input().split())
-    arr0.append(a)
-    arr1.append(b)
+    a = 101
+    b = 0
+    for j in range(n):
+        if i == j:
+            continue
+        if arr[j][0] < a:
+            a = arr[j][0]
+        if arr[j][1] > b:
+            b = arr[j][1]
 
-max_x1 = arr1.pop(arr1.index(max(arr1)))
-max_x2 = arr1.pop(arr1.index(max(arr1)))
+    ans = min(ans, b - a)
 
-min_x1 = arr0.pop(arr0.index(min(arr0)))
-min_x2 = arr0.pop(arr0.index(min(arr0)))
-
-if max_x1 - max_x2 >= min_x2 - min_x1:
-    print(max_x2 - min_x1)
-else:
-    print(max_x1 - min_x2)
+print(ans)
