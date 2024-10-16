@@ -16,7 +16,6 @@ while True:
     c = 0
     t = []
     if check(arr):
-        print(cnt)
         break
 
     while True:
@@ -28,8 +27,10 @@ while True:
             x = t[-1]
         else:
             c = 1
-
-    if t[-1] == chk_num:
+    print(t)
+    if len(t) == n:
+        break
+    elif t[-1] == chk_num:
         cnt += len(t)
         for i in range(len(t)):
             arr.append(t.pop(0))
