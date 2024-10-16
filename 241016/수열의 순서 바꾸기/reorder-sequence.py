@@ -40,7 +40,7 @@ while True:
 
     else:
         cnt += len(t)
-        idx = arr.index(min(arr))
+        idx = arr.index(t[-1] + 1)
 
         for i in range(len(t)):
             arr.insert(idx, t.pop())
