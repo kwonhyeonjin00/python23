@@ -42,4 +42,4 @@ elif even < odd:
             odd -= k
             cnt += 1
 
-print(cnt)
+    print(cnt)
