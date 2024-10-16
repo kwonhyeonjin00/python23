@@ -4,7 +4,7 @@ arr = list(map(int, input().split()))
 cnt = 0
 
 x = arr.pop()
-chk = 0
+chk = 1
 
 for i in range(n - 1):
     t = arr.pop()
