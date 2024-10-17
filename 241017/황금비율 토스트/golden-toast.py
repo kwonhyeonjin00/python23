@@ -81,13 +81,14 @@ for j in range(m):
     a = input().split()
 
     if a[0] == 'L':
-        if it.prev:
+        if it.prev != None:
             it = it.prev
     elif a[0] == 'R':
-        if it.next:
+        if it.next != None:
             it = it.next
     elif a[0] == 'D':
-        d.erase(it)
+        if it.data != None:
+            d.erase(it)
     elif a[0] == 'P':
         d.insert(it, a[1])
 
