@@ -90,7 +90,8 @@ for j in range(m):
         if it.next != None:
             d.erase(it)
     elif a[0] == 'P':
-        d.insert(it, a[1])
+        if it.prev != None:
+            d.insert(it, a[1])
 
 it = d.begin()
 
