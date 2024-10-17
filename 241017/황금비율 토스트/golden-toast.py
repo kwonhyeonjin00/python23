@@ -87,7 +87,7 @@ for j in range(m):
         if it.next != None:
             it = it.next
     elif a[0] == 'D':
-        if it.data != None:
+        if it.next != None:
             d.erase(it)
     elif a[0] == 'P':
         d.insert(it, a[1])
