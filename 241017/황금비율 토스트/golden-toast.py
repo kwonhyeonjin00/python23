@@ -81,9 +81,11 @@ for j in range(m):
     a = input().split()
 
     if a[0] == 'L':
-        it = it.prev
+        if it.prev:
+            it = it.prev
     elif a[0] == 'R':
-        it = it.next
+        if it.next:
+            it = it.next
     elif a[0] == 'D':
         d.erase(it)
     elif a[0] == 'P':
